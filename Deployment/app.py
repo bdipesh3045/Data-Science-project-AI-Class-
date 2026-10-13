@@ -9,6 +9,7 @@ from PIL import Image, ImageOps
 
 MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "best_sign_language.keras")
 LETTERS = string.ascii_uppercase[:25]  # Sign Language MNIST labels 0-24 = A-Y; 9 (J) never appears in training data
+SKIP = {"J"}
 
 TOP_K = 3
 MAX_UPLOAD_BYTES = 8 * 1024 * 1024
